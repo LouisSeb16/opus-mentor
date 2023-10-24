@@ -15,7 +15,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            // position: relative;
 
             @include responsivePro(exception){
                 width: 100%;
