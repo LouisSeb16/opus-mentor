@@ -7,9 +7,9 @@ const SignupForm = () => {
     <div className={style.formSection}>
       <h2>Get Started</h2>
       <p>
-        Note that the details required of you are solely for identification
+        {`Note that the details required of you are solely for identification
         purposes. You're not required to use your original credentials. Any
-        dummy data would suffice.
+        dummy data would suffice.`}
       </p>
 
       <form action="">
