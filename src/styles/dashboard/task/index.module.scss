@@ -1,0 +1,58 @@
+@import '../../utils/function.scss';
+
+.taskPage {
+    // border: 1px solid red;
+
+    .taskHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        button {
+            height: 48px;
+            padding: 5px 20px;
+            // width: 100%;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            background: $secondaryColor;
+            color: #fff;
+            font-size: 14px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            i {
+                font-size: 20px;
+                margin-right: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include responsivePro(exception) {
+                    margin-right: 0px;
+                    margin: auto;
+                }
+            }
+
+            p {
+                margin: 0px;
+                font-size: 14px;
+
+                // @include responsivePro(exception) {
+                //     display: none;
+                // }
+            }
+        }
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight: 900;
+        margin: 0;
+    }
+}

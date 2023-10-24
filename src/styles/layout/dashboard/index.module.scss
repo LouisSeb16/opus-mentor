@@ -1,0 +1,188 @@
+@import '../../utils/function.scss';
+
+.dashboardLayout {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    overflow-x: hidden;
+
+    .sideSection {
+        width: 15%;
+        height: 100%;
+        border-right: 1px solid #efecec;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        padding: 40px 5px;
+
+        @include responsivePro(mobile) {
+            width: 100%;
+            right: 0;
+            z-index: 5;
+            display: none;
+        }
+
+        @include responsivePro(exception) {
+            padding: 40px 10px;
+        }
+
+        .sidebar {
+            height: 100%;
+
+            #con {
+                position: relative;
+                height: 100%;
+
+                .header {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 20px;
+                }
+
+                ul {
+                    margin-bottom: 40px;
+
+                    li {
+                        button {
+                            width: 100%;
+                            height: 48px;
+                            display: flex;
+                            justify-content: left;
+                            align-items: center;
+                            border-radius: 10px;
+                            border: 1px solid transparent;
+                            background: transparent;
+                            color: #6f6f76;
+                            margin: 10px auto;
+                            padding-left: 20%;
+
+                            &:hover {
+                                background: #efecec;
+                                color: #000;
+                            }
+
+                            @include responsivePro(exception) {
+                                justify-content: center;
+                                padding-left: 0px;
+                            }
+
+
+                            i {
+                                font-size: 20px;
+                                margin-right: 10px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                @include responsivePro(exception) {
+                                    margin-right: 0px;
+                                    margin: auto;
+                                }
+                            }
+
+                            p {
+                                margin: 0px;
+                                font-size: 14px;
+
+                                @include responsivePro(exception) {
+                                    display: none;
+                                }
+                            }
+
+                        }
+
+                        .active {
+                            background: $secondaryColor;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .mainSection {
+        width: 85%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-left: 15%;
+        position: relative;
+
+        @include responsivePro(mobile) {
+            width: 100%;
+            margin-left: 0px;
+        }
+
+        .dashHeader {
+            height: 10%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            border-bottom: 1px solid #efecec;
+            padding: 20px;
+
+            div {
+                border: 1px solid #efecec;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-left: 10px;
+                cursor: pointer;
+                font-size: 20px;
+                color: #6f6f76;
+
+                &:hover {
+                    background: #efecec;
+                    color: #000;
+                }
+            }
+
+        }
+
+        .body {
+            padding: 40px 40px 20px;
+            height: 90%;
+            overflow-y: auto;
+            background: #efecec;
+
+            &::-webkit-scrollbar {
+                width: 7px;
+            }
+
+            &::-webkit-scrollbar-track {
+                // box-shadow: inset 0 0 5px #fff;
+                // border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: $secondaryColor;
+                border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background: #fff;
+            }
+
+            @include responsivePro(mobile) {
+                padding: 20px;
+
+                &::-webkit-scrollbar {
+                    width: 0px;
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,10 @@
 import React from "react";
 import style from "@/styles/onboarding/index.module.scss";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const LoginForm = () => {
+  const { push } = useRouter();
   return (
     <div className={style.formSection}>
       <h2>Welcome Back</h2>
@@ -18,7 +20,7 @@ const LoginForm = () => {
           <input type="text" />
         </div>
       </form>
-      <button>Continue</button>
+      <button onClick={() => push("/dashboard/overview")}>Continue</button>
 
       <h5>
         Not yet registered? <Link href={"/signup"}>Sign up</Link>
