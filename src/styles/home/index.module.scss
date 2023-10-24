@@ -1,0 +1,76 @@
+@import '../utils/function.scss';
+
+.homePage {
+    padding: 20px;
+
+    #div {
+
+        #img {
+            width: 100%;
+            background: $secondaryColor;
+        }
+
+        #col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            @include responsivePro(exception){
+                width: 100%;
+            }
+        }
+
+        h1 {
+            font-family: $headingFont;
+            font-size: 40px;
+            font-weight: 900;
+
+            span {
+                color: $secondaryColor;
+            }
+
+            @include responsivePro(mobile){
+                margin-top: 20px;
+            }
+
+            @include responsivePro(exception){
+                margin-top: 20px;
+            }
+        }
+
+        p {
+            span {
+                color: $secondaryColor;
+            }
+        }
+
+        #btns {
+            margin-top: 20px;
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include responsivePro(mobile){
+                width: 100%;
+            }
+
+            button {
+                width: 45%;
+                height: 60px;
+                border-radius: 13px;
+                border: 1px solid transparent;
+
+                &:first-of-type {
+                    background: $secondaryColor;
+                    color: #fff;
+                }
+
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
