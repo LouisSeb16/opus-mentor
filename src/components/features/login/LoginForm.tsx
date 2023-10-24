@@ -17,8 +17,8 @@ const LoginForm = () => {
           <label htmlFor="">Password</label>
           <input type="text" />
         </div>
-        <button>Continue</button>
       </form>
+      <button>Continue</button>
 
       <h5>
         Not yet registered? <Link href={"/signup"}>Sign up</Link>
