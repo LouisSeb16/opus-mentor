@@ -43,6 +43,7 @@
 
         @include responsivePro(mobile) {
             margin-top: 20px;
+            font-size: 25px;
         }
 
         @include responsivePro(exception) {
