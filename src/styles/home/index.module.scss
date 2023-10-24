@@ -16,7 +16,7 @@
             justify-content: center;
             align-items: flex-start;
 
-            @include responsivePro(exception){
+            @include responsivePro(exception) {
                 width: 100%;
             }
         }
@@ -30,11 +30,12 @@
                 color: $secondaryColor;
             }
 
-            @include responsivePro(mobile){
+            @include responsivePro(mobile) {
                 margin-top: 20px;
+                font-size: 30px;
             }
 
-            @include responsivePro(exception){
+            @include responsivePro(exception) {
                 margin-top: 20px;
             }
         }
@@ -52,7 +53,7 @@
             justify-content: space-between;
             align-items: center;
 
-            @include responsivePro(mobile){
+            @include responsivePro(mobile) {
                 width: 100%;
             }
 
@@ -67,8 +68,16 @@
                     color: #fff;
                 }
 
-                &:hover{
+                &:hover {
                     opacity: 0.8;
+                }
+
+                @include responsivePro(mobile) {
+                    width: 48%;
+                }
+
+                @include responsivePro(exception) {
+                    width: 48%;
                 }
             }
         }
