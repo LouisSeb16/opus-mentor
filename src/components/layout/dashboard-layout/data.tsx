@@ -19,16 +19,16 @@ export const chatLinks = [
         title: 'Tasks',
         icon: <BsIcons.BsListTask/>
     },
-    {
-        href: '/dashboard/calender',
-        title: 'Calender',
-        icon: <BsIcons.BsCalendar2Check/>
-    },
-    {
-        href: '/dashboard/settings',
-        title: 'Settings',
-        icon: <RiIcons.RiSettingsLine/>
-    },
+    // {
+    //     href: '/dashboard/calender',
+    //     title: 'Calender',
+    //     icon: <BsIcons.BsCalendar2Check/>
+    // },
+    // {
+    //     href: '/dashboard/settings',
+    //     title: 'Settings',
+    //     icon: <RiIcons.RiSettingsLine/>
+    // },
     
 ];
 

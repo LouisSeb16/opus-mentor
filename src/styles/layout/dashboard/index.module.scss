@@ -156,7 +156,7 @@
             padding: 40px 40px 20px;
             height: 90%;
             overflow-y: auto;
-            background: #efecec;
+            background: #fbf8f8;
 
             &::-webkit-scrollbar {
                 width: 7px;
@@ -168,7 +168,7 @@
             }
 
             &::-webkit-scrollbar-thumb {
-                background: $secondaryColor;
+                background: #ccc;
                 border-radius: 10px;
             }
 

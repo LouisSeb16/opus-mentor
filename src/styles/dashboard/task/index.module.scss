@@ -1,58 +1,202 @@
 @import '../../utils/function.scss';
 
 .taskPage {
-    // border: 1px solid red;
-
-    .taskHeader {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-
-        button {
-            height: 48px;
-            padding: 5px 20px;
-            // width: 100%;
-            border-radius: 10px;
-            border: 1px solid transparent;
-            background: $secondaryColor;
-            color: #fff;
-            font-size: 14px;
-            display: flex;
-            justify-content: left;
-            align-items: center;
-
-            &:hover {
-                opacity: 0.8;
-            }
-
-            i {
-                font-size: 20px;
-                margin-right: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                @include responsivePro(exception) {
-                    margin-right: 0px;
-                    margin: auto;
-                }
-            }
-
-            p {
-                margin: 0px;
-                font-size: 14px;
-
-                // @include responsivePro(exception) {
-                //     display: none;
-                // }
-            }
-        }
-    }
 
     h2 {
         font-size: 25px;
         font-weight: 900;
         margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .taskSection {
+
+        #col{
+            @include responsivePro(mobile) {
+                width: 100%;
+            }
+
+            @include responsivePro(exception) {
+                width: 100%;
+            }
+        }
+
+        .sections {
+
+            #sectionHeader {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @include responsivePro(mobile) {
+                    margin: 10px auto;
+                }
+
+                #left {
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+
+                    div {
+                        margin-right: 10px;
+
+                        span {
+                            height: 20px;
+                            width: 20px;
+                            background: red;
+                        }
+
+                        h3 {
+                            font-size: 13px;
+                            margin: 0px;
+                            font-weight: 900;
+                        }
+                    }
+
+                    p {
+                        font-size: 14px;
+                        margin: 0px;
+                        // font-weight: 900;
+                    }
+                }
+            }
+
+            button {
+                height: 48px;
+                padding: 5px 15px;
+                width: 100%;
+                border-radius: 10px;
+                border: 2px solid #efecec;
+                background: #fff;
+                color: $secondaryColor;
+                font-size: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px auto;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+                i {
+                    font-size: 20px;
+                    margin-right: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                p {
+                    margin: 0px;
+                    font-size: 14px;
+                }
+            }
+
+            #sectionBody {
+                height: 400px;
+                width: 100%;
+                border-top: 1px solid #efecec;
+                border-bottom: 1px solid #efecec;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                overflow-y: auto;
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                @include responsivePro(mobile) {
+                    flex-direction: row;
+                    overflow-y: hidden;
+                    flex-wrap: nowrap;
+                    overflow-x: auto;
+                }
+
+
+                .taskCard {
+                    height: auto;
+                    width: 100%;
+                    border-radius: 20px;
+                    background: #fff;
+                    border: 2px solid #efecec;
+                    padding: 20px;
+                    margin: 10px auto;
+
+                    @include responsivePro(mobile) {
+                        width: 100%;
+                        margin-right: 10px;
+                        flex: 0 0 auto;
+                    }
+
+                    .cardHeader {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        // margin-bottom: 20px;
+                        border-bottom: 2px solid #efecec;
+                        padding-bottom: 20px;
+
+                        span {
+                            font-size: 12px;
+                            background: $secondaryColor;
+                            color: #fff;
+                            padding: 5px 10px;
+                            border-radius: 5px;
+                        }
+                    }
+
+                    .body {
+                        padding-top: 20px;
+
+                        h1 {
+                            font-size: 15px;
+                            font-weight: 600;
+                        }
+
+                        p {
+                            font-size: 13px;
+                            color: #6f6f76;
+                        }
+                    }
+
+                    .footer {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-top: 2px solid #efecec;
+                        padding-top: 20px;
+
+                        span {
+                            font-size: 12px;
+                            background: green;
+                            color: rgb(179, 235, 179);
+                            padding: 5px 10px;
+                            border-radius: 5px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            p {
+                                margin: 0;
+                                margin-left: 5px;
+                            }
+                        }
+
+                        .icons {
+
+                            #icon {
+                                cursor: pointer;
+                                font-size: 17px;
+                                color: #6f6f76;
+                                margin-left: 3px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
     }
 }
