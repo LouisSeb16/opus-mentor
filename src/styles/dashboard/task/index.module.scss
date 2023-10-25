@@ -102,13 +102,10 @@
                 padding-bottom: 10px;
                 overflow-y: auto;
                 overflow-x: hidden;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+
 
                 @include responsivePro(mobile) {
-                    flex-direction: row;
+                    display: flex;
                     overflow-y: hidden;
                     flex-wrap: nowrap;
                     overflow-x: auto;
