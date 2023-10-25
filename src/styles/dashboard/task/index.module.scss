@@ -114,6 +114,24 @@
                     overflow-x: auto;
                 }
 
+                &::-webkit-scrollbar {
+                    width: 4px;
+                }
+    
+                &::-webkit-scrollbar-track {
+                    // box-shadow: inset 0 0 5px #fff;
+                    // border-radius: 10px;
+                }
+    
+                &::-webkit-scrollbar-thumb {
+                    background: #ccc;
+                    border-radius: 10px;
+                }
+    
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #fff;
+                }
+
 
                 .taskCard {
                     height: auto;
