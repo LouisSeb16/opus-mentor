@@ -3,14 +3,18 @@ import style from "@/styles/onboarding/index.module.scss";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const LoginForm = () => {
-  const { push } = useRouter();
+const LoginForm = (props: any) => {
+  const {
+    store: {},
+    action: { signIn },
+  } = props;
+
   return (
     <div className={style.formSection}>
       <h2>Welcome Back</h2>
       <p>Welcome Back, Please enter your details</p>
 
-      <form action="">
+      {/* <form action="">
         <div id={style.formGroup}>
           <label htmlFor="">Username</label>
           <input type="text" />
@@ -21,7 +25,11 @@ const LoginForm = () => {
         </div>
       </form>
       <button onClick={() => push("/dashboard/overview")}>Continue</button>
-
+      <hr /> */}
+      <button id={style.google} onClick={signIn}>
+        <img src="/images/logo/google.png" alt="" />
+        <p>Login with Google</p>
+      </button>
       <h5>
         Not yet registered? <Link href={"/signup"}>Sign up</Link>
       </h5>

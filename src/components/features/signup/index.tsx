@@ -2,11 +2,11 @@ import React from "react";
 import SignupForm from "./SignupForm";
 import OnboardingLayout from "@/components/layout/onboarding-layout";
 
-const SignUpComponent = () => {
+const SignUpComponent = (props: any) => {
   return (
     <>
       <OnboardingLayout>
-        <SignupForm />
+        <SignupForm {...props} />
       </OnboardingLayout>
     </>
   );

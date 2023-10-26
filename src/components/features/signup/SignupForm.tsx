@@ -2,7 +2,11 @@ import React from "react";
 import style from "@/styles/onboarding/index.module.scss";
 import Link from "next/link";
 
-const SignupForm = () => {
+const SignupForm = (props: any) => {
+  const {
+    store: { },
+    action: { signIn },
+  } = props;
   return (
     <div className={style.formSection}>
       <h2>Get Started</h2>
@@ -12,7 +16,7 @@ const SignupForm = () => {
         dummy data would suffice.`}
       </p>
 
-      <form action="">
+      {/* <form action="">
         <div id={style.formGroup}>
           <label htmlFor="">Fullname</label>
           <input type="text" />
@@ -27,6 +31,11 @@ const SignupForm = () => {
         </div>
       </form>
       <button>Continue</button>
+      <hr /> */}
+      <button id={style.google} onClick={signIn}>
+        <img src="/images/logo/google.png" alt="" />
+        <p>Sign up with Google</p>
+      </button>
 
       <h5>
         Already registered? <Link href={"/login"}>Login</Link>
