@@ -38,8 +38,8 @@ export default () => {
     }
 
     const signInAnonymously = async () => {
-        const result = await signInAnonymously(auth);
-        console.log(result);
+        // const result = await signInAnonymously(auth);
+        // console.log(result);
     }
 
     const signOut = () => auth.signOut();
