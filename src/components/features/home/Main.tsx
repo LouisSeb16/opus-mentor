@@ -11,9 +11,9 @@ const Main = () => {
     <div className={`container-fluid ${style.homePage}`}>
       <div className="container" id={style.div}>
         <Logo />
-        <div className="row">
+        <div className="row" id={style.row}>
           <div className="col-md-6" id={style.col}>
-            <img src="/images/home/hello.png" alt="" id={style.img} />
+            <img src="/images/home/helloT.png" alt="" id={style.img} />
           </div>
           <div className="col-md-6" id={style.col}>
             <h1>

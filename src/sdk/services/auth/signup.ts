@@ -1,5 +1,5 @@
 import { opusMentorStore } from "@/sdk";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signInAnonymously } from "firebase/auth";
 import { useRouter } from "next/router";
 import { useAuthState } from 'react-firebase-hooks/auth';
 
@@ -35,6 +35,11 @@ export default () => {
 
     const signIn = async () => {
         const result = await signInWithPopup(auth, provider);
+    }
+
+    const signInAnonymously = async () => {
+        const result = await signInAnonymously(auth);
+        console.log(result);
     }
 
     const signOut = () => auth.signOut();

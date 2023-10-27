@@ -33,7 +33,9 @@ const SignupForm = (props: any) => {
       <button>Continue</button>
       <hr /> */}
       <button id={style.google} onClick={signIn}>
+        <div>
         <img src="/images/logo/google.png" alt="" />
+        </div>
         <p>Sign up with Google</p>
       </button>
 

@@ -27,7 +27,9 @@ const LoginForm = (props: any) => {
       <button onClick={() => push("/dashboard/overview")}>Continue</button>
       <hr /> */}
       <button id={style.google} onClick={signIn}>
+      <div>
         <img src="/images/logo/google.png" alt="" />
+        </div>
         <p>Login with Google</p>
       </button>
       <h5>

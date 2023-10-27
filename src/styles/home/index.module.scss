@@ -5,9 +5,14 @@
 
     #div {
 
+        #row{
+            margin: 50px auto;
+        }
         #img {
-            width: 100%;
-            background: $secondaryColor;
+          width: 100%;
+          background: $secondaryColor;
+          height: 400px;
+          object-fit: cover;
         }
 
         #col {
@@ -23,7 +28,7 @@
 
         h1 {
             font-family: $headingFont;
-            font-size: 40px;
+            font-size: 30px;
             font-weight: 900;
 
             span {
@@ -41,6 +46,8 @@
         }
 
         p {
+            // color: gray;
+            font-size: 14px;
             span {
                 color: $secondaryColor;
             }
