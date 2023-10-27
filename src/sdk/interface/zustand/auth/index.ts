@@ -11,4 +11,5 @@ export type IAuthStore = {
     setAuthLoading: (param: boolean) => void;
     authMessage: string;
     setAuthMessage: (data: userState['data']) => void;
+    signOutUser: () => void;
 }

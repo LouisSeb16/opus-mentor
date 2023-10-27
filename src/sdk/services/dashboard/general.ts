@@ -1,21 +1,9 @@
 import { opusMentorStore } from "@/sdk";
-import { authServices } from "..";
 import { getAuth } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from "next/router";
 
 export default () => {
-    const authenticationServices = authServices.signupService.default();
-    // const {
-    //     store: {
-    //         userData,
-    //         isLoggedIn,
-    //     },
-    //     action: {
-    //         push
-    //     }
-    // } = authenticationServices;
-
     const { authStore } = opusMentorStore.zustand;
     const { useAuthStore } = authStore;
     const { push } = useRouter();
@@ -30,6 +18,7 @@ export default () => {
         setLoggedIn,
         setAuthLoading,
         setAuthMessage,
+        signOutUser
     } = useAuthStore((state: any) => ({
         userData: state.userData,
         isLoggedIn: state.isLoggedIn,
@@ -39,12 +28,16 @@ export default () => {
         setLoggedIn: state.setIsLoggedIn,
         setAuthLoading: state.setAuthLoading,
         setAuthMessage: state.setAuthMessage,
+        signOutUser: state.signOutUser
     }));
 
     const auth = getAuth();
     const [user, loading] = useAuthState(auth);
 
-    const signOut = () => auth.signOut();
+    const signOut = () => {
+        auth.signOut();
+        signOutUser();
+    }
 
 
     return {

@@ -11,13 +11,11 @@ export default () => {
     } = dGeneralServices;
 
     useEffect(() => {
-        if (!user) {
+        if (!user && !userData) {
             push('/');
             setUser(null);
             setLoggedIn(false);
-        } else {
-
         }
-    }, [user]);
+    }, [user, userData]);
     return dGeneralServices;
 }

@@ -25,10 +25,13 @@ export const useAuthStore = create<IAuthStore>()(
                     set(() => ({
                         authMessage: data
                     }));
+                },
+                signOutUser: () => {
+                    set({ userData: null })
                 }
             }),
             {
-                name: 'Opus-mentor',
+                name: 'Opus-mentor-auth',
                 storage: createJSONStorage(() => localStorage),
             }
         )

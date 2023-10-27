@@ -2,11 +2,48 @@
 
 .taskPage {
 
-    h2 {
-        font-size: 25px;
-        font-weight: 900;
-        margin: 0;
-        margin-bottom: 20px;
+    .taskHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+
+        h2 {
+            font-size: 25px;
+            font-weight: 900;
+            margin: 0;
+        }
+
+        button {
+            height: 48px;
+            padding: 5px 15px;
+            // width: 100%;
+            border-radius: 10px;
+            border: 2px solid #efecec;
+            background: #fff;
+            color: $secondaryColor;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            i {
+                font-size: 20px;
+                margin-right: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            p {
+                margin: 0px;
+                font-size: 14px;
+            }
+        }
     }
 
     .taskSection {
@@ -22,14 +59,20 @@
         }
 
         .sections {
+            border-radius: 10px;
+            border: 2px solid #efecec;
+            background: #fff;
+            padding: 20px 10px;
 
             #sectionHeader {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                margin-bottom: 20px;
+                padding: 0px 10px;
 
                 @include responsivePro(mobile) {
-                    margin: 10px auto;
+                    margin: 10px auto 20px;
                 }
 
                 #left {
@@ -40,17 +83,19 @@
                     div {
                         margin-right: 10px;
 
-                        span {
-                            height: 20px;
-                            width: 20px;
-                            background: red;
-                        }
-
                         h3 {
                             font-size: 13px;
                             margin: 0px;
-                            font-weight: 900;
+                            // font-weight: 900;
                         }
+                    }
+
+                    span{
+                        background: #efecec;
+                        padding: 5px 10px;
+                        font-size: 14px;
+                        border-radius: 10px;
+                        font-weight: 900;
                     }
 
                     p {
@@ -61,47 +106,14 @@
                 }
             }
 
-            button {
-                height: 48px;
-                padding: 5px 15px;
-                width: 100%;
-                border-radius: 10px;
-                border: 2px solid #efecec;
-                background: #fff;
-                color: $secondaryColor;
-                font-size: 14px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 20px auto;
-
-                &:hover {
-                    opacity: 0.8;
-                }
-
-                i {
-                    font-size: 20px;
-                    margin-right: 5px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                p {
-                    margin: 0px;
-                    font-size: 14px;
-                }
-            }
-
             #sectionBody {
                 height: 400px;
                 width: 100%;
-                border-top: 1px solid #efecec;
-                border-bottom: 1px solid #efecec;
                 padding-top: 10px;
                 padding-bottom: 10px;
                 overflow-y: auto;
                 overflow-x: hidden;
+                padding-right: 5px;
 
 
                 @include responsivePro(mobile) {
@@ -147,18 +159,32 @@
 
                     .cardHeader {
                         display: flex;
-                        justify-content: space-between;
+                        justify-content: left;
                         align-items: center;
                         // margin-bottom: 20px;
-                        border-bottom: 2px solid #efecec;
-                        padding-bottom: 20px;
 
                         span {
                             font-size: 12px;
-                            background: $secondaryColor;
-                            color: #fff;
-                            padding: 5px 10px;
-                            border-radius: 5px;
+                            background: #d2e9ff;
+                            color: $secondaryColor;
+                            padding: 10px 15px;
+                            border-radius: 18px;
+                            margin-right: 10px;
+                        }
+
+                        #high{
+                            color: red;
+                            background-color: rgb(255, 206, 206);
+                        }
+
+                        #medium{
+                            color: orange;
+                            background-color: rgb(248, 230, 194);
+                        }
+
+                        #low{
+                            color: green;
+                            background-color: rgb(189, 252, 189);
                         }
                     }
 
@@ -180,18 +206,16 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
-                        border-top: 2px solid #efecec;
-                        padding-top: 20px;
+                        padding-top: 5px;
 
                         span {
                             font-size: 12px;
-                            background: green;
-                            color: rgb(179, 235, 179);
                             padding: 5px 10px;
                             border-radius: 5px;
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
+                            color: #6f6f76;
 
                             p {
                                 margin: 0;

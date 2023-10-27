@@ -3,8 +3,9 @@ import React from "react";
 import style from "@/styles/dashboard/overview/index.module.scss";
 import Summary from "./Summary";
 import * as BsIcons from "react-icons/bs";
+import { opusMentorHooks } from "@/sdk";
 
-const OverviewComponent = () => {
+const Main = (props: any) => {
   return (
     <>
       <DashboardLayout>
@@ -18,11 +19,13 @@ const OverviewComponent = () => {
               <p>Create Task</p>
             </button>
           </div>
-          <Summary />
+          <Summary {...props}/>
         </div>
       </DashboardLayout>
     </>
   );
 };
 
-export default OverviewComponent;
+export default function OverviewComponent() {
+  return <Main {...opusMentorHooks.dashboardHooks.taskHooks.default()} />
+}

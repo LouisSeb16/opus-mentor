@@ -10,8 +10,6 @@ const DashboardHeader = (props: any) => {
     action: { push, signOut },
   } = props;
 
-  console.log(userData);
-
   const [dropdown, setDropdown] = useState(false);
   const handleDropdown = () => {
     if (dropdown) {
@@ -41,7 +39,7 @@ const DashboardHeader = (props: any) => {
       <div id={style.div}>
         <VsIcons.VscBell />
       </div>
-      {isLoggedIn && (
+      {userData && (
         <div id={style.profileDiv}>
           <div className={style.profile}>
             <div onClick={handleDropdown}>
@@ -71,7 +69,8 @@ const DashboardHeader = (props: any) => {
           </motion.div>
         </div>
       )}
-      {!isLoggedIn && (
+      
+      {!userData && (
         <div id={style.div}>
           <HiIcons.HiOutlineUser />
         </div>
