@@ -2,11 +2,7 @@ import React from "react";
 import Main from "./Main";
 
 const HomePageComponent = () => {
-  return (
-    <>
-      <Main />
-    </>
-  );
+  return <Main />;
 };
 
 export default HomePageComponent;

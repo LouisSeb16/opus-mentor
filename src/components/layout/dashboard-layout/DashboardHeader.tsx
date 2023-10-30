@@ -34,6 +34,9 @@ const DashboardHeader = (props: any) => {
     hidden: { opacity: 0 },
   };
 
+  console.log(userData);
+  const placeholderImage = "/images/dashboard/user.png";
+
   return (
     <div className={style.dashHeader}>
       <div id={style.div}>
@@ -43,7 +46,11 @@ const DashboardHeader = (props: any) => {
         <div id={style.profileDiv}>
           <div className={style.profile}>
             <div onClick={handleDropdown}>
-              <img src={`${userData.photoURL}`} alt="Profile image" />
+              <img
+                src={`${userData.photoURL}`}
+                alt="Profile image"
+                onError={(e) => (e.currentTarget.src = placeholderImage)}
+              />
             </div>
           </div>
           <motion.div
@@ -58,7 +65,11 @@ const DashboardHeader = (props: any) => {
             <div id={style.header}>
               <h1>ACCOUNT</h1>
               <div id={style.user}>
-                <img src={`${userData.photoURL}`} alt="Profile image" />
+                <img
+                  src={`${userData.photoURL}`}
+                  alt="Profile image"
+                  onError={(e) => (e.currentTarget.src = placeholderImage)}
+                />
                 <div>
                   <h3>{userData?.displayName}</h3>
                   <p>{userData?.email}</p>
@@ -69,7 +80,7 @@ const DashboardHeader = (props: any) => {
           </motion.div>
         </div>
       )}
-      
+
       {!userData && (
         <div id={style.div}>
           <HiIcons.HiOutlineUser />

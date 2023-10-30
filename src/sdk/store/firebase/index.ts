@@ -1,16 +1,17 @@
 // Import the functions you need from the SDKs you need
+import { envConfig } from "@/sdk/config";
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC0fEqtWLmkGk0lADYkLzwMe4ugaxBBWbw",
-  authDomain: "opus-mentor.firebaseapp.com",
-  projectId: "opus-mentor",
-  storageBucket: "opus-mentor.appspot.com",
-  messagingSenderId: "408812363076",
-  appId: "1:408812363076:web:49763e7e7f86e5ffca4b11",
-  measurementId: "G-H9627Z64VF"
+  apiKey: envConfig.default.apiKey,
+  authDomain: envConfig.default.authDomain,
+  projectId: envConfig.default.projectId,
+  storageBucket: envConfig.default.storageBucket,
+  messagingSenderId: envConfig.default.messagingSenderId,
+  appId: envConfig.default.appId,
+  measurementId: envConfig.default.measurementId
 };
 
 const app = initializeApp(firebaseConfig);
@@ -20,5 +21,5 @@ const initFirebase = () => {
 };
 
 export default {
-  app, initFirebase
+  app, initFirebase, auth
 }

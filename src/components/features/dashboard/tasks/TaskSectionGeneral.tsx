@@ -1,6 +1,5 @@
 import React from "react";
 import style from "@/styles/dashboard/task/index.module.scss";
-import * as BsIcons from "react-icons/bs";
 import TaskCard from "./TaskCard";
 import TaskPopUp from "./TaskPopUp";
 
@@ -25,7 +24,6 @@ const TaskSectionGeneral = (props: any) => {
                   </div>
                   <span>{overViewData.upComing}</span>
                 </div>
-                {/* <BsIcons.BsThreeDotsVertical className={style.menu} /> */}
               </div>
               <div id={style.sectionBody}>
                 {taskSortedData.upComing
@@ -49,7 +47,6 @@ const TaskSectionGeneral = (props: any) => {
                   </div>
                   <span>{overViewData.progress}</span>
                 </div>
-                {/* <BsIcons.BsThreeDotsVertical className={style.menu} /> */}
               </div>
               <div id={style.sectionBody}>
                 {taskSortedData.progress
@@ -73,7 +70,6 @@ const TaskSectionGeneral = (props: any) => {
                   </div>
                   <span>{overViewData.done}</span>
                 </div>
-                {/* <BsIcons.BsThreeDotsVertical className={style.menu} /> */}
               </div>
               <div id={style.sectionBody}>
                 {taskSortedData.done
@@ -97,7 +93,6 @@ const TaskSectionGeneral = (props: any) => {
                   </div>
                   <span>{overViewData.expired}</span>
                 </div>
-                {/* <BsIcons.BsThreeDotsVertical className={style.menu} /> */}
               </div>
               <div id={style.sectionBody}>
                 {taskSortedData.expired

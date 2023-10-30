@@ -27,33 +27,35 @@ const TaskCard = ({ props, handleDeleteTask }: any) => {
   };
 
   return (
-    <div className={style.taskCard}>
-      <div className={style.cardHeader}>
-        <span id={pIds(taskPriority)}>{taskPriority}</span>
-        <span>{taskCategory}</span>
-      </div>
+    <>
+      <div className={style.taskCard}>
+        <div className={style.cardHeader}>
+          <span id={pIds(taskPriority)}>{taskPriority}</span>
+          <span>{taskCategory}</span>
+        </div>
 
-      <div className={style.body}>
-        <h1>{taskTitle}</h1>
-        <p>{formatDescription(taskDescription, 20)}</p>
-      </div>
+        <div className={style.body}>
+          <h1>{taskTitle}</h1>
+          <p>{formatDescription(taskDescription, 20)}</p>
+        </div>
 
-      <div className={style.footer}>
-        {taskDueDate && (
-          <span>
-            <BsIcons.BsCalendar2Check /> <p>{date.toDateString()}</p>
-          </span>
-        )}
+        <div className={style.footer}>
+          {taskDueDate && (
+            <span>
+              <BsIcons.BsCalendar2Check /> <p>{date.toDateString()}</p>
+            </span>
+          )}
 
-        <div className={style.icons}>
-          <HiIcons.HiPencil id={style.icon} />
-          <MdIcons.MdDeleteOutline
-            id={style.icon}
-            onClick={() => handleDeleteTask(taskId)}
-          />
+          <div className={style.icons}>
+            <HiIcons.HiPencil id={style.icon} />
+            <MdIcons.MdDeleteOutline
+              id={style.icon}
+              onClick={() => handleDeleteTask(taskId)}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
