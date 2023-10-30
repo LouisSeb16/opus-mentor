@@ -26,6 +26,8 @@ const TaskCard = ({ props, handleDeleteTask }: any) => {
     return text?.length > number ? text.substring(0, 80) + "..." : text;
   };
 
+  
+
   return (
     <>
       <div className={style.taskCard}>
