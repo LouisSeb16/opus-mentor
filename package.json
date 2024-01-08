@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tawk.to/tawk-messenger-react": "^2.0.2",
     "axios": "^1.5.1",
     "bootstrap": "^5.3.2",
     "firebase": "^10.5.0",

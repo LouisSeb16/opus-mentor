@@ -34,7 +34,6 @@ const DashboardHeader = (props: any) => {
     hidden: { opacity: 0 },
   };
 
-  console.log(userData);
   const placeholderImage = "/images/dashboard/user.png";
 
   return (
